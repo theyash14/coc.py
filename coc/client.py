@@ -371,7 +371,7 @@ class Client:
                         continue
                     id_mapped_static_data[item['_id']] = item
 
-                    if section == "troops":
+                    if section in ("troops", "heroes"):
                         self._name_to_id_mapping[(item['name'], section, item.get("village"))] = item['_id']
                     else:
                         self._name_to_id_mapping[(item['name'], section)] = item['_id']
